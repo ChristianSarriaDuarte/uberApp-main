@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Uber Duoc UC Vespucio</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div *ngIf="showOffer" class="offer-popup" id="offer-banner">
+    <p>¡Oferta especial para ti!</p>
+    <ion-button (click)="claimOffer()">Reclamar</ion-button>
+    <ion-icon name="close-circle" (click)="closeOffer()"></ion-icon>
+  </div>
+  <div class="container">
+    <h1>Bienvenido a Uber Duoc UC Vespucio</h1>
+    <p>¡Explora la mejor manera de moverte !</p>
+    <div class="info-cards">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>¿Cómo funciona Uber?</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Descubre cómo puedes solicitar un viaje y disfrutar de un viaje seguro y cómodo con Uber.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Beneficios de ser conductor</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Conoce los beneficios de trabajar como conductor con Uber y cómo puedes empezar.</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+   <div class="uber-gif">
+    <img src="https://cdn.dribbble.com/users/101707/screenshots/2503069/uber.gif" alt="Uber Commercial GIF">
+  </div>
+  <div class="options-container">
+    <ion-card class="option-card" routerLink="/become-driver">
+      <ion-card-header>
+        <ion-card-title><ion-icon name="car-outline"></ion-icon> ¿Quieres ser conductor?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Únete a nuestro equipo de conductores y comienza a ganar dinero hoy mismo.</p>
+        <ion-button expand="full" color="primary">Más Información</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="option-card" routerLink="/find-ride">
+      <ion-card-header>
+        <ion-card-title><ion-icon name="people-outline"></ion-icon> ¿Estás buscando viaje?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Encuentra el viaje perfecto con solo unos clics.</p>
+        <ion-button expand="full" color="primary">Buscar Viaje</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</div>
+</ion-content>
+
+

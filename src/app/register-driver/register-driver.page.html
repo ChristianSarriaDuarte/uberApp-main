@@ -1,0 +1,25 @@
+<ion-content padding>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input formControlName="phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input formControlName="licenseType" placeholder="Ingrese el tipo de licencia"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox formControlName="confirm"></ion-checkbox>
+      <ion-label>Confirmo que tengo más de 18 años y poseo una licencia válida</ion-label>
+    </ion-item>
+    <ion-button expand="full" type="submit">Registrar</ion-button>
+  </form>
+</ion-content>

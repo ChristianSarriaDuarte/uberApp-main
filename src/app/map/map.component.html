@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mapa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="map" style="height: 50vh;"></div>
+
+<div class="route-form">
+  <label for="origin">Origen:</label>
+  <input id="origin" type="text" [(ngModel)]="origin" placeholder="Ejemplo: Santiago, Chile" />
+
+  <label for="destination">Destino:</label>
+  <input id="destination" type="text" [(ngModel)]="destination" placeholder="Ejemplo: Valparaíso, Chile" />
+
+  <button (click)="calculateRoute()">Calcular Ruta</button>
+</div>
+
+<div *ngIf="distance">
+  <p><strong>Distancia:</strong> {{ distance }}</p>
+  <p><strong>Duración:</strong> {{ duration }}</p>
+  <p><strong>Costo Estimado:</strong> ${{ cost }}</p>
+</div>
+</ion-content>
+
+  
+
+

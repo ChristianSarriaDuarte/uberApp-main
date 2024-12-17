@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Buscar Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-wrapper">
+    
+    <div *ngFor="let vehicle of vehicles">
+      <button (click)="selectVehicle(vehicle)">
+        Seleccionar {{ vehicle.name }} <!-- Asegúrate de que 'name' es una propiedad válida -->
+      </button>
+    </div>
+
+
+
+
+    
+    <!-- Map Container -->
+    <app-map></app-map> <!-- Agregamos el componente del mapa aquí -->
+  </div>
+</ion-content>
